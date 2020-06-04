@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Algorithm</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <style></style>
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/addons/p5.dom.min.js"></script>
+    <script src="p5/addons/p5.sound.min.js"></script>
+    <script src="sketch_1_scenario.js"></script>
+  </head>
+  <body>
+    <div id="control-panel">
+      <div style="position:relative; top:30px; left:20px;font-size:16pt;font-weight:700;">
+        Explore the algorithm
+      </div>
+
+      <div style="position:relative; width: 300px; top:45px; left:20px;font-size:10pt;">
+        Adjust how aggressive the algorithm should be in identifying defendants who might reoffend.
+      </div>
+
+      <div style="position:absolute; width: 120px; top:130px; left:15px; font-size:9pt;">
+        Identify more <br>
+      </div>
+
+      <div style="position:absolute; width: 120px; top:185px; left:15px; font-size:9pt;">
+        <span style="font-size:8pt; font-style: italic;">
+          More who are identified might not reoffend
+        </span>
+      </div>
+
+      <div style="position:absolute; width: 120px; top:130px; left:210px; font-size:9pt; text-align:right;">
+        Identify fewer <br>
+      </div>
+
+      <div style="position:absolute; width: 120px; top:185px; left:210px; font-size:9pt; text-align:right;">
+        <span style="font-size:8pt; font-style: italic;">
+          More who reoffend might not be identified
+        </span>
+      </div>
+
+      <div id="disparity-label" style="position:relative; width: 270px; top:220px; left:20px; font-size:12pt;">
+        Explore effects on different groups
+      </div>
+
+      <div id="disparity-instruction" style="position:relative; width: 300px; top:290px; left:20px;font-size:9pt; font-style: italic;">The algorithm has inherent trade-offs between overall error and group-specific errors.
+      </div>
+
+      <div id="disparity-label-1" class="tooltip" style="position:absolute; width: 120px; top:655px; left:20px; font-size:9pt;">
+        Minimize differences between groups
+      </div>
+
+      <div class="tooltip" id="disparity-label-2" style="position:absolute; width: 90px; top:655px; left:230px; font-size:9pt; text-align:right;">
+        Minimize Overall Error
+      </div>
+    </div>
+
+    <div id="view-toggle">
+    </div>
+
+    <div class="tooltip" id="summary-1" style="position:absolute; top:75px; left:390px; font-size:11pt;">
+      Total Defendants:
+    </div>
+    <div id="summary-1-data" style="position:absolute; top:75px; left:515px; font-size:11pt;">
+      3000
+    </div>
+
+    <div class="tooltip" id="summary-2" style="position:absolute; top:75px; left:600px; font-size:11pt;">
+      Prediction Errors <i class="far fa-question-circle" style="font-size:9pt;"></i> :
+      <span class="tooltiptext" style="font-size:10pt"><strong>Prediction Errors</strong>: the number <br>of defendants that are incorrectly predicted</span>
+    </div>
+    <div id="summary-2-data" style="position:absolute; top:75px; left:745px; font-size:11pt;">
+      3450
+    </div>
+
+    <div class="tooltip" id="summary-3" style="position:absolute; top:75px; left:850px; font-size:11pt;">
+      Disparity <i class="far fa-question-circle" style="font-size:9pt;"></i> :
+      <span class="tooltiptext" style="font-size:10pt"><strong>Disparity</strong>: the largest difference between the two types of prediction errors between the two groups<br>
+        <span style="font-size:9pt; font-style: italic;"> max(|FP<sub>female</sub>-FP<sub>male</sub>|,|FN<sub>female</sub>-FN<sub>male</sub>|)
+        </span>
+      </span>
+    </div>
+    <div id="summary-3-data" style="position:absolute; top:75px; left:940px; font-size:11pt;">
+      3450
+    </div>
+
+    <div class="tooltip" id="summary-1" style="position:absolute; top:75px; left:420px; font-size:11pt;">
+      Model #:
+    </div>
+    <div class="tooltip" id="model-id" style="position:absolute; top:75px; left:485px; font-size:11pt;">
+      <span class="tooltiptext" style="font-size:10pt"><strong>Model ID</strong>: the number <br>of defendants that are incorrectly predicted</span>
+    </div>
+
+  </body>
+</html>

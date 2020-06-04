@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Model</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <style></style>
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/addons/p5.dom.min.js"></script>
+    <script src="p5/addons/p5.sound.min.js"></script>
+    <script src="sketch2.js"></script>
+  </head>
+  <body>
+    <div id="control-panel">
+      <div style="position:relative; top:30px; left:20px;font-size:16pt;font-weight:700;">Explore the model</div>
+
+      <!-- <div style="position:relative; top:50px; left:20px;font-size:12pt;">Use the following toggles to explore the model</div> -->
+
+      <div style="position:relative; width: 300px; top:50px; left:20px;font-size:10pt;">You want to decide how do you want to make predictions.</div>
+
+      <div style="position:absolute; width: 90px; top:190px; left:20px; font-size:9pt;">
+        Predict <strong>ALL</strong> defendants to re-offend
+        <!-- <span class="tooltiptext"><strong>Aggressive Prediction</strong>: predict defendants to re-offend with <strong>weak</strong> evidence.</span> -->
+      </div>
+
+      <div style="position:absolute; width: 90px; top:190px; left:230px; font-size:9pt; text-align:right;">
+        Predict <strong>NO</strong> defendants to re-offend
+        <!-- <span class="tooltiptext"><strong>Conservative Prediction</strong>: predict defendants to re-offend with <strong>strong</strong> evidence.</span> -->
+      </div>
+
+      <!-- <div style="position:relative; width: 300px; top:200px; left:20px;font-size:12pt;">Select a <span style="text-decoration: underline;">protected attribute:</div> -->
+      <div id="disparity-label" class="tooltip" style="position:relative; width: 210px; top:200px; left:20px; font-size:12pt;">
+        Select a protected attribute.
+        <span class="tooltiptext" style="font-size:9pt"><strong>Protected Attribute</strong>: an attribute based on which two groups of defendants to be treated equally.</span>
+      </div>
+
+      <div id="disparity-instruction" style="position:relative; width: 320px; top:270px; left:20px;font-size:10pt;">The algorithm has its inherent trade-offs between being fair to groups based on protected attribute and making fewer errors in prediction that has to be decide.</div>
+
+      <div id="disparity-label-1" class="tooltip" style="position:absolute; width: 90px; top:640px; left:20px; font-size:9pt;">
+        Minimize<br>Disparity
+        <span class="tooltiptext"><strong>Disparity</strong>: Difference of incorrectly predicted defendants between the two groups.</span>
+      </div>
+
+      <div class="tooltip" id="disparity-label-2" style="position:absolute; width: 90px; top:640px; left:230px; font-size:9pt; text-align:right;">
+        Minimize<br>Prediction Errors
+        <span class="tooltiptext"><strong>Prediction Errors</strong>: the number of defendants that are incorrectly predicted.</span>
+      </div>
+
+    </div>
+    <div id="view-toggle">
+    </div>
+
+  </body>
+</html>

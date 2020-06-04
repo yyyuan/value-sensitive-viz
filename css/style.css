@@ -1,0 +1,271 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 24pt;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: ;
+}
+
+p {
+  font-size: 12pt;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 10px;
+  color: rgb(35,35,35);
+}
+
+button {
+  font-size: 10pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+  margin-left: 10px;
+  background-color: rgba(35,35,35,0);
+  border-color: rgb(35,35,35);
+  border-width: 2.25px;
+  position: fixed;
+}
+
+button.active {
+  color: rgb(255,255,255);
+  background-color: rgba(35,35,35,1);
+}
+
+#tabs {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+#description {
+  position: absolute;
+  top: 25px;
+  left: 60px;
+  font-size: 12pt;
+}
+
+#control-panel {
+  /* background-color: rgba(35,35,35);*/
+  position: fixed;
+  width:350px;
+  height:100%;
+  min-height: 650px;
+  z-index: 99;
+  color: rgb(255,255,255);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10pt;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: radio; /* Chrome, Safari, Opera */
+  -moz-appearance: radio;    /* Firefox */
+  -ms-appearance: radio;     /* not currently supported */
+}
+
+.data-summary{
+  font-size: 11pt;
+}
+
+.tooltip {
+  /*text-decoration: underline;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 275px;
+  /*background-color: rgb(255,255,255);
+  color: rgb(0,0,0);*/
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  text-align: left;
+  border-radius: 0px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 110%;
+  margin-left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: none;
+  border-color: rgba(255,255,255,1) rgba(255,255,255,1) transparent  transparent  ;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.85;
+}
+
+#view-toggle {
+  position: fixed;
+  left:0px;
+  width: 100%;
+  height: 60px;
+  z-index: 50;
+  background-color: rgba(255,255,255,0);
+}
+
+.scenario-header {
+  font-size: 16pt;
+  font-weight: 700;
+  padding-left: 20px;
+  padding-right: 40px;
+  max-width: 200px;
+  line-height: 22pt;
+    padding-top: 10px;
+}
+
+.scenario-content {
+  font-size: 12pt;
+  font-weight: 400;
+  padding-right: 60px;
+  padding-left: 20px;
+  line-height: 18pt;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  max-width: 600px;
+}
+
+.slider-range-left,
+.slider-range-right {
+  font-size: 11pt;
+  font-weight: 400;
+  color: rgba(35,35,35,1);
+}
+
+.slider-range-left{
+  text-align: left;
+}
+
+.slider-range-right {
+  text-align: right;
+}
+
+.slider-label {
+  font-size: 10pt;
+  font-weight: 400;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  background: transparent;
+  padding: 0;
+  margin: 8px 0;
+  border-style: solid;
+  border-width: 0 0 1.5px 0;
+  font-size: 18pt;
+  width: 100px;
+  height: 40px
+}
+
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 300px; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  position: fixed;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid rgb(255,255,255);
+  height: 24px;
+  width: 12px;
+  background: rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid rgb(255,255,255);
+  height: 24px;
+  width: 12px;
+  background: rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid rgb(255,255,255);
+  height: 24px;
+  width: 12px;
+  background: rgb(255,255,255);
+  cursor: pointer;
+  margin-top: -11px;; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.4px;
+  cursor: pointer;
+  background: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.75);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1.4px;
+  cursor: pointer;
+  background: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.75);
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.75);
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255,255,255,.75);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(255,255,255,.75);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(255,255,255,.75);
+}

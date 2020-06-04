@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Prototyping ORES</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 30pt;
+		font-weight: 400;
+		font-family: 'Roboto', sans-serif;
+		color: rgba(0,0,0,.9);
+		margin:0;
+		margin-bottom: 20px;
+	}
+	.intro p{
+		font-size: 14pt;
+		color: rgba(0,0,0,.9);
+		margin-bottom: 40px;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+
+	.btn-link {
+		color: rgba(0,0,0,.95);
+	}
+	.btn-link:hover {
+		color: rgba(0,0,0,.65);
+	}
+	.fas {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.btn-link:hover .fas {
+		padding-right: 5px;
+		padding-left: 15px;
+	}
+
+	</style>
+
+</head>
+<body>
+
+<div id="demosMenu">
+	<a class="btn-link" href="second-step.html">
+		Continue to Exploring Models<i class="fas fa-arrow-right"></i>
+	</a>
+</div>
+
+<div id="fullpage" >
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Welcome to our tool!</h1>
+			<p>Did you know that Artificial Intelligences (AIs) support Wikipedia? As an example, ORES (Objective Revision Evaluation Service) is an AI hosting system that Wikipedia editors use to detect vandalism, measure article quality, and organize work lists. Our tool is to help you dive deeper into it to understand how does ORES works and to achieve your goals of using ORES.
+</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1>How ORES works?</h1>
+			<p>ORES is a machine learning model that automatically judge the quality of edits. It takes edits as the input and process them into different features. Then it makes prediction about whether this edit is damaging or non-damaging.</p>
+			<img style="width: 80%; height:auto; margin-top:60px;" src="img/section2.png"></img>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Examples</h1>
+			<img style="width: 80%; height:auto; margin-top:50px;" src="img/section3.png"></img>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>How is our model trained?</h1>
+			<p>The model is based on the training set with 20,000 edits marked by xx diferent labels. </p>
+			<button>
+				View our training set
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript" src="js/examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage','4thPage'],
+				sectionsColor: ['#FFFFFF','#F8F8F8', '#FFFFFF', '#F8F8F8'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['First page', 'Second page', 'Third and last page']
+    });
+</script>
+
+</body>
+</html>

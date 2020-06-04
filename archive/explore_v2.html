@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Model</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <style></style>
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/addons/p5.dom.min.js"></script>
+    <script src="p5/addons/p5.sound.min.js"></script>
+    <script src="sketch_v2.js"></script>
+  </head>
+  <body>
+    <div id="control-panel">
+      <div style="position:relative; top:30px; left:20px;font-size:14pt;font-weight:700;">Explore the model</div>
+
+      <!-- <div style="position:relative; top:50px; left:20px;font-size:12pt;">Use the following toggles to explore the model</div> -->
+
+      <div style="position:relative; width: 300px; top:50px; left:20px;font-size:10pt;">You want to decide how do you want to make predictions.</div>
+
+      <div class="tooltip" style="position:absolute; width: 100px; top:185px; left:20px; font-size:9pt;">
+        Conservative Prediction
+        <!-- <br>false-positive rate -->
+        <!-- <span class="tooltiptext"><strong>False-positive rate</strong>: percentage of defendants who do not recommit are predicted to relapse into criminal behavior</span> -->
+      </div>
+
+      <div class="tooltip" style="position:absolute; width: 110px; top:185px; left:215px; font-size:9pt; text-align:right;">
+        Aggressive Prediction
+        <!-- <br>false-negative rate -->
+        <!-- <span class="tooltiptext"><strong>False-negative rate</strong>: percentage of defendants who do recommit are predicted not to relapse into criminal behavior</span> -->
+      </div>
+
+      <div style="position:relative; width: 300px; top:210px; left:20px;font-size:10pt;">Select an attribute whose disparity of false-positive to be equalized</div>
+
+      <div id="disparity-instruction" style="display: none; position:relative; width: 320px; top:290px; left:20px;font-size:10pt;">The algorithm has its inherent trade-offs between the disparity of false positives and false negatives between the two groups that needs to be decided</div>
+
+      <div id="disparity-label-1" class="tooltip" style="display: none;position:absolute; width: 120px; top:515px; left:20px; font-size:9pt;">
+        Minimize false positive for African Americans
+        <!-- <span class="tooltiptext">Group false-positive rate to the average.</span> -->
+      </div>
+
+      <div id="disparity-label-2" class="tooltip" style="display: none;position:absolute; width: 120px; top:515px; left:200px; font-size:9pt; text-align:right;">
+        Minimize false positive for Caucasians
+        <!-- <span class="tooltiptext"><strong>Error rate</strong>: percentage of defendants who are incorrectly predicted either to recommit or not to recommit.</span> -->
+      </div>
+
+      <div id="disparity-label-3" class="tooltip" style="display: none;position:absolute; width: 120px; top:640px; left:20px; font-size:9pt;">
+        Minimize false negative for African Americans
+        <!-- <span class="tooltiptext">Group false-positive rate to the average.</span> -->
+      </div>
+
+      <div id="disparity-label-4" class="tooltip"  style="display: none;position:absolute; width: 120px; top:640px; left:200px; font-size:9pt; text-align:right;">
+        Minimize false negative for Caucasians
+        <!-- <span class="tooltiptext"><strong>Error rate</strong>: percentage of defendants who are incorrectly predicted either to recommit or not to recommit.</span> -->
+      </div>
+
+    </div>
+    <div id="view-toggle">
+    </div>
+
+  </body>
+</html>
